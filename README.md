@@ -12,3 +12,7 @@
 <br/>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nnamanikester&label=Profile%20views&color=0e75b6&style=flat" alt="nnamanikester" /> </p>
+
+<br/>
+
+[![Nnamani Kester's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nnamanikester&theme=radical)](https://github.com/nnamanikester/github-readme-stats)
