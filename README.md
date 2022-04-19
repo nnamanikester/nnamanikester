@@ -1,9 +1,9 @@
-<h1 align="center">Hi 👋, I'm Nnamani Kester</h1>
-<h3 align="center">Full Stack Mobile App and Web Developer @Destreetboard.</h3>
+<h1 align="center">Hi 👋, I'm John Kester Nnamani</h1>
+<h3 align="center">Devops Engineer & Mobile Developer @Destreetboard.</h3>
 
 <br />
 
-<p align="center">React, React Native, and NodeJs are my favorite tools.</p>
+<p align="center">React, React Native, Bitrise, Circle CI, AWS and NodeJs are my favorite tools.</p>
 
 <br />
 
