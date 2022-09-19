@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm John Kester Nnamani</h1>
-<h3 align="center">Devops Engineer & Mobile Developer @Destreetboard.</h3>
+<h3 align="center">Software Engineer @Destreetboard.</h3>
 
 <br />
 
