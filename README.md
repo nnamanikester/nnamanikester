@@ -15,7 +15,7 @@
 
 <br/>
 
-[![Nnamani Kester's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=kescript&theme=radical)](https://github.com/nnamanikester/github-readme-stats)
+[![Nnamani Kester's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=kescript&theme=radical)]
 
 <br/>
 
