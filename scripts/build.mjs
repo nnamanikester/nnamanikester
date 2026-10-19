@@ -68,10 +68,11 @@ function gradientDefs(id, { x2 = "100%", y2 = "0%" } = {}) {
 // ─── Hero ───────────────────────────────────────────────────────────────────
 
 const ROLES = [
-  "scalable web platforms",
   "cross-platform mobile apps",
-  "APIs that don't flinch",
-  "products people love",
+  "full-stack web platforms",
+  "AI-powered developer tools",
+  "data pipelines & ML models",
+  "products people rely on",
 ];
 
 // A typewriter built from SMIL: a clip rect whose width steps one character
@@ -142,10 +143,10 @@ function codeCard(t, { x, y, w, h }) {
   const lines = [
     `${W("const")} ${K("kester")} ${P("=")} ${P("{")}`,
     `  ${K("role")}${P(":")} ${S("Software Engineer")}${P(",")}`,
-    `  ${K("based")}${P(":")} ${S("Nigeria")}${P(",")}`,
-    `  ${K("web")}${P(":")} ${arr(["Next.js", "React"])}${P(",")}`,
-    `  ${K("mobile")}${P(":")} ${arr(["React Native", "Android"])}${P(",")}`,
-    `  ${K("server")}${P(":")} ${arr(["Node", "NestJS", "GraphQL"])}${P(",")}`,
+    `  ${K("now")}${P(":")} ${S("Fullstack Engineer @ Turing")}${P(",")}`,
+    `  ${K("ships")}${P(":")} ${arr(["mobile", "web", "backend"])}${P(",")}`,
+    `  ${K("stack")}${P(":")} ${arr(["React Native", "TS", "Python"])}${P(",")}`,
+    `  ${K("adding")}${P(":")} ${arr(["AI eng", "data eng", "ML"])}${P(",")}`,
     `  ${K("shipping")}${P(":")} ${B("true")}${P(",")}`,
     `${P("};")}`,
   ];
@@ -224,7 +225,7 @@ function hero(mode) {
     <g>
       <text x="64" y="312" font-family="${MONO}" font-size="22" fill="${t.muted}" xml:space="preserve">${esc(prompt)}</text>
       ${tw.body}
-      <text x="64" y="356" font-family="${SANS}" font-size="16" fill="${t.muted}">Full-stack &amp; mobile engineer turning ideas into fast, polished products.</text>
+      <text x="64" y="356" font-family="${SANS}" font-size="16" fill="${t.muted}">Software engineer across mobile, web &amp; backend. Now adding AI, data &amp; ML.</text>
     </g>
 
     ${codeCard(t, { x: 690, y: 72, w: 450, h: 276 })}
