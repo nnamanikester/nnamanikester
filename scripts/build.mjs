@@ -68,10 +68,10 @@ function gradientDefs(id, { x2 = "100%", y2 = "0%" } = {}) {
 // ─── Hero ───────────────────────────────────────────────────────────────────
 
 const ROLES = [
-  "cross-platform mobile apps",
-  "full-stack web platforms",
+  "full-stack software products",
+  "Python & TypeScript backends",
   "AI-powered developer tools",
-  "data pipelines & ML models",
+  "web and mobile apps",
   "products people rely on",
 ];
 
@@ -141,12 +141,12 @@ function codeCard(t, { x, y, w, h }) {
   const arr = (xs) => `${P("[")}${xs.map(S).join(P(", "))}${P("]")}`;
 
   const lines = [
-    `${W("const")} ${K("kester")} ${P("=")} ${P("{")}`,
+    `${W("const")} ${K("john")} ${P("=")} ${P("{")}`,
     `  ${K("role")}${P(":")} ${S("Software Engineer")}${P(",")}`,
     `  ${K("now")}${P(":")} ${S("Fullstack Engineer @ Turing")}${P(",")}`,
-    `  ${K("ships")}${P(":")} ${arr(["mobile", "web", "backend"])}${P(",")}`,
-    `  ${K("stack")}${P(":")} ${arr(["React Native", "TS", "Python"])}${P(",")}`,
-    `  ${K("adding")}${P(":")} ${arr(["AI eng", "data eng", "ML"])}${P(",")}`,
+    `  ${K("languages")}${P(":")} ${arr(["Python", "TypeScript"])}${P(",")}`,
+    `  ${K("builds")}${P(":")} ${arr(["backend", "web", "mobile"])}${P(",")}`,
+    `  ${K("interests")}${P(":")} ${arr(["AI", "data eng", "ML"])}${P(",")}`,
     `  ${K("shipping")}${P(":")} ${B("true")}${P(",")}`,
     `${P("};")}`,
   ];
@@ -166,7 +166,7 @@ function codeCard(t, { x, y, w, h }) {
     <circle cx="${x + 24}" cy="${y + 26}" r="5.5" fill="#FF5F57"/>
     <circle cx="${x + 43}" cy="${y + 26}" r="5.5" fill="#FEBC2E"/>
     <circle cx="${x + 62}" cy="${y + 26}" r="5.5" fill="#28C840"/>
-    <text x="${x + w / 2}" y="${y + 30}" font-family="${MONO}" font-size="12" fill="${t.muted}" text-anchor="middle">kester.ts</text>
+    <text x="${x + w / 2}" y="${y + 30}" font-family="${MONO}" font-size="12" fill="${t.muted}" text-anchor="middle">john.ts</text>
     <line x1="${x}" x2="${x + w}" y1="${y + 46}" y2="${y + 46}" stroke="${t.border}"/>
     ${gutter}
     ${body}
@@ -179,8 +179,8 @@ function hero(mode) {
   const prompt = "> building ";
   const tw = typewriter({ x: 64 + prompt.length * 22 * 0.6, y: 312, size: 22, color: ACCENT[1] });
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="John Kester Nnamani — Software Engineer">
-  <title>John Kester Nnamani — Software Engineer</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="John Nnamani — Software Engineer">
+  <title>John Nnamani — Software Engineer</title>
   <defs>
     ${gradientDefs("accent")}
     <clipPath id="frame"><rect width="${W}" height="${H}" rx="24"/></clipPath>
@@ -218,14 +218,14 @@ function hero(mode) {
     </g>
 
     <g>
-      <text x="60" y="176" font-family="${SANS}" font-size="72" font-weight="800" letter-spacing="-2.5" fill="${t.text}">John Kester</text>
+      <text x="60" y="176" font-family="${SANS}" font-size="72" font-weight="800" letter-spacing="-2.5" fill="${t.text}">John</text>
       <text x="60" y="252" font-family="${SANS}" font-size="72" font-weight="800" letter-spacing="-2.5" fill="url(#accent)">Nnamani.</text>
     </g>
 
     <g>
       <text x="64" y="312" font-family="${MONO}" font-size="22" fill="${t.muted}" xml:space="preserve">${esc(prompt)}</text>
       ${tw.body}
-      <text x="64" y="356" font-family="${SANS}" font-size="16" fill="${t.muted}">Software engineer across mobile, web &amp; backend. Now adding AI, data &amp; ML.</text>
+      <text x="64" y="356" font-family="${SANS}" font-size="16" fill="${t.muted}">Software engineer writing Python &amp; TypeScript. Interested in AI, data &amp; ML.</text>
     </g>
 
     ${codeCard(t, { x: 690, y: 72, w: 450, h: 276 })}
@@ -412,6 +412,90 @@ function dashboard(mode, s) {
 </svg>`;
 }
 
+// ─── Snake ──────────────────────────────────────────────────────────────────
+
+// 5×7 pixel glyphs, one string per row. The grid has 7 rows, like GitHub's.
+const GLYPHS = {
+  K: ["X...X", "X..X.", "X.X..", "XX...", "X.X..", "X..X.", "X...X"],
+  E: ["XXXXX", "X....", "X....", "XXXX.", "X....", "X....", "XXXXX"],
+  S: [".XXXX", "X....", "X....", ".XXX.", "....X", "....X", "XXXX."],
+  C: [".XXXX", "X....", "X....", "X....", "X....", "X....", ".XXXX"],
+  R: ["XXXX.", "X...X", "X...X", "XXXX.", "X.X..", "X..X.", "X...X"],
+  I: ["XXXXX", "..X..", "..X..", "..X..", "..X..", "..X..", "XXXXX"],
+  P: ["XXXX.", "X...X", "X...X", "XXXX.", "X....", "X....", "X...."],
+  T: ["XXXXX", "..X..", "..X..", "..X..", "..X..", "..X..", "..X.."],
+};
+
+function lerpColor(stops, f) {
+  const seg = Math.min(stops.length - 2, Math.floor(f * (stops.length - 1)));
+  const local = f * (stops.length - 1) - seg;
+  const [a, b] = [stops[seg], stops[seg + 1]].map((h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)));
+  return `#${a.map((v, i) => Math.round(v + (b[i] - v) * local).toString(16).padStart(2, "0")).join("")}`;
+}
+
+// The snake slithers down and up each column in turn; every letter cell its
+// head passes lights up, so the word is written behind it. Then it fades and loops.
+function snake(mode, word = "KESCRIPT") {
+  const t = THEMES[mode];
+  const COLS = 53, ROWS = 7, cell = 16, gap = 4, PAD = 8, step = cell + gap;
+  const W = PAD * 2 + COLS * step - gap, H = PAD * 2 + ROWS * step - gap;
+  const LEN = 6, dt = 0.032, hold = 3, fade = 0.6;
+
+  const lit = new Set();
+  const wordCols = word.length * 6 - 1;
+  const c0 = Math.floor((COLS - wordCols) / 2);
+  [...word].forEach((ch, li) => GLYPHS[ch].forEach((row, r) =>
+    [...row].forEach((px, c) => px === "X" && lit.add(`${c0 + li * 6 + c},${r}`))));
+
+  // Path: enter from the left, serpentine through every column, exit right.
+  const path = [];
+  for (let k = LEN; k > 0; k--) path.push([-k, 0]);
+  for (let c = 0; c < COLS; c++)
+    for (let i = 0; i < ROWS; i++) path.push([c, c % 2 ? ROWS - 1 - i : i]);
+  const [lc, lr] = path[path.length - 1];
+  for (let k = 1; k <= LEN; k++) path.push([lc + k, lr]);
+
+  const S = path.length - 1;
+  const D = S * dt + hold;
+  const kt = (sec) => (sec / D).toFixed(5);
+  const px = (c) => PAD + c * step, py = (r) => PAD + r * step;
+
+  const grid = [];
+  for (let c = 0; c < COLS; c++)
+    for (let r = 0; r < ROWS; r++)
+      grid.push(`<rect x="${px(c)}" y="${py(r)}" width="${cell}" height="${cell}" rx="4" fill="${t.heat[0]}"/>`);
+
+  const letters = path.map(([c, r], s) => {
+    if (!lit.has(`${c},${r}`)) return "";
+    const on = s * dt;
+    const times = [0, on, on + 0.2, D - fade - 0.1, D - 0.1, D].map(kt).join(";");
+    const fill = lerpColor(ACCENT, (c - c0) / (wordCols - 1));
+    return `<rect x="${px(c)}" y="${py(r)}" width="${cell}" height="${cell}" rx="4" fill="${fill}" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="${times}" dur="${D}s" repeatCount="indefinite"/>
+    </rect>`;
+  }).join("");
+
+  const keyTimes = [...path.map((_, s) => kt(s * dt)), "1"].join(";");
+  const body = Array.from({ length: LEN }, (_, k) => {
+    const size = cell - k * 1.2, off = (cell - size) / 2;
+    const at = (s) => path[Math.max(0, s - k)];
+    const xs = [...path.map((_, s) => px(at(s)[0]) + off), px(path[S - k][0]) + off].map((v) => v.toFixed(1)).join(";");
+    const ys = [...path.map((_, s) => py(at(s)[1]) + off), py(path[S - k][1]) + off].map((v) => v.toFixed(1)).join(";");
+    return `<rect width="${size.toFixed(1)}" height="${size.toFixed(1)}" rx="${(size / 3).toFixed(1)}" fill="${t.text}">
+      <animate attributeName="x" values="${xs}" keyTimes="${keyTimes}" dur="${D}s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="${ys}" keyTimes="${keyTimes}" dur="${D}s" repeatCount="indefinite"/>
+    </rect>`;
+  }).reverse().join("");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="A snake writing ${word} across a contribution grid">
+  <title>A snake writing ${word} across a contribution grid</title>
+  <defs><clipPath id="board"><rect x="${PAD}" y="${PAD}" width="${W - PAD * 2}" height="${H - PAD * 2}"/></clipPath></defs>
+  <g>${grid.join("")}</g>
+  <g>${letters}</g>
+  <g clip-path="url(#board)">${body}</g>
+</svg>`;
+}
+
 // ─── Main ───────────────────────────────────────────────────────────────────
 
 const stats = TOKEN ? await fetchGraphQL() : await fetchPublic();
@@ -419,5 +503,6 @@ await mkdir(OUT, { recursive: true });
 for (const mode of Object.keys(THEMES)) {
   await writeFile(new URL(`hero-${mode}.svg`, OUT), hero(mode));
   await writeFile(new URL(`stats-${mode}.svg`, OUT), dashboard(mode, stats));
+  await writeFile(new URL(`snake-${mode}.svg`, OUT), snake(mode));
 }
 console.log(`Built assets for ${USER}: ${stats.contributions} contributions, ${stats.repos} repos, ${stats.langs.length} languages.`);

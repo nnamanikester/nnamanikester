@@ -1,7 +1,7 @@
 <a href="https://linkedin.com/in/nnamanikester">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-    <img alt="John Kester Nnamani, Software Engineer" src="./assets/hero-light.svg" width="100%">
+    <img alt="John Nnamani, Software Engineer" src="./assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
@@ -19,9 +19,11 @@
 
 ## Hi, I'm John 👋
 
-**I'm a software engineer who builds complete products: mobile apps, web platforms, and the backends behind them.** I've spent 6+ years shipping software people use every day, with more than five apps live on the App Store and Play Store.
+**I'm a software engineer.** I build complete products, from backend services and APIs to the web and mobile apps people use. I've been shipping production software for 6+ years.
 
-**What I'm adding now:** AI engineering, data engineering and machine learning. I'm not switching careers. I'm adding these skills so the software I build can be smarter and better informed by its data.
+**Python and TypeScript are my main languages.** I write Python every day at Turing, where I work as a Fullstack Engineer.
+
+**I'm interested in AI engineering, data engineering and machine learning,** and in using them to make the software I build smarter.
 
 <br>
 
@@ -30,40 +32,19 @@
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>🧩 Ship whole products</h3>
-      I take products from idea to the app stores: React Native and TypeScript on the client, Node, NestJS and Python on the server, and the CI/CD that keeps releases steady.
+      <h3>🧩 End-to-end products</h3>
+      I own features from the database to the interface: Python, Node and NestJS services, REST and GraphQL APIs, and React and React Native apps.
     </td>
     <td width="33%" valign="top">
-      <h3>⚡ Make them fast and reliable</h3>
-      I tune apps for low-end Android devices, add caching that cuts wasted requests, and set up end-to-end testing and release pipelines so each release goes out safely.
+      <h3>⚡ Software that holds up</h3>
+      I add caching to cut wasted requests, tune for performance, and set up automated testing and CI/CD so every release goes out safely.
     </td>
     <td width="33%" valign="top">
-      <h3>🤖 Put AI and data to work</h3>
-      I've built an AI-powered engineering assistant, and I'm going deeper on LLM applications, data pipelines and machine learning with Python.
+      <h3>🤖 AI that does real work</h3>
+      I've built an AI-powered Slack assistant that helps engineers navigate the codebase and debug issues faster.
     </td>
   </tr>
 </table>
-
-<br>
-
-## Recent work
-
-#### Fullstack Engineer · Turing &nbsp;<sub><code>Sep 2024 – Present</code></sub>
-
-- Built a Chrome extension that kept customer report filing running while the API was suspended, contributing to **over $1M in new revenue within a month**.
-- Built an **AI-powered Slack assistant** that helps engineers find their way around the codebase and debug issues faster.
-- Shipped Python backend features and API caching. I also restructured the frontend codebase and onboarded the team onto the new conventions.
-
-#### Senior React Native Engineer · Pickriders &nbsp;<sub><code>Mar 2023 – Oct 2024</code></sub>
-
-- Built the **customer and rider apps from scratch** for a logistics platform, and tuned them to run smoothly on lower-end Android devices.
-- Led the backend migration from GraphQL to REST with **NestJS**, and worked on the finance system that tracks transactions, fees and revenue.
-- Owned the CI/CD pipelines for **five codebases**: customer, rider, admin, business and backend.
-
-#### Senior React Native Engineer · Maharishi Foundation International &nbsp;<sub><code>Nov 2021 – Mar 2023</code></sub>
-
-- Built a Detox end-to-end test suite that runs in Bitrise, **cutting manual testing time by over 70%**, and led QA through releases.
-- Shipped meditation session tracking, reminders and push notifications, and automated releases with Fastlane.
 
 <br>
 
@@ -71,11 +52,11 @@
 
 <table>
   <tr>
-    <td width="170"><b>Mobile & web</b></td>
+    <td width="170"><b>Languages</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,kotlin,swift,androidstudio&theme=dark">
-        <img alt="TypeScript, JavaScript, React and React Native, Next.js, Tailwind CSS, Kotlin, Swift, Android Studio" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,kotlin,swift,androidstudio&theme=light">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,ts,js,kotlin,java&theme=dark">
+        <img alt="Python, TypeScript, JavaScript, Kotlin, Java" src="https://skillicons.dev/icons?i=py,ts,js,kotlin,java&theme=light">
       </picture>
     </td>
   </tr>
@@ -83,29 +64,39 @@
     <td><b>Backend & cloud</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,nestjs,py,graphql,mongodb,redis,firebase,aws&theme=dark">
-        <img alt="Node.js, NestJS, Python, GraphQL, MongoDB, Redis, Firebase, AWS" src="https://skillicons.dev/icons?i=nodejs,nestjs,py,graphql,mongodb,redis,firebase,aws&theme=light">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,redis,firebase,aws,docker&theme=dark">
+        <img alt="Node.js, NestJS, GraphQL, MongoDB, Redis, Firebase, AWS, Docker" src="https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,redis,firebase,aws,docker&theme=light">
       </picture>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Frontend & mobile</b></td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=dark">
+        <img alt="React and React Native, Next.js, Tailwind CSS" src="https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=light">
+      </picture>
+      <br><sub>React, React Native and Next.js</sub>
     </td>
   </tr>
   <tr>
     <td><b>Testing & delivery</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=jest,githubactions,docker,git,vercel&theme=dark">
-        <img alt="Jest, GitHub Actions, Docker, Git, Vercel" src="https://skillicons.dev/icons?i=jest,githubactions,docker,git,vercel&theme=light">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=jest,githubactions,git,vercel&theme=dark">
+        <img alt="Jest, GitHub Actions, Git, Vercel" src="https://skillicons.dev/icons?i=jest,githubactions,git,vercel&theme=light">
       </picture>
-      <br><sub>Also Detox, Fastlane, Bitrise, EAS, CircleCI and Sentry</sub>
+      <br><sub>Also Detox, Fastlane, Bitrise, CircleCI and Sentry</sub>
     </td>
   </tr>
   <tr>
-    <td><b>Now adding</b><br><sub>AI · data · ML</sub></td>
+    <td><b>Interested in</b><br><sub>AI · data · ML</sub></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=dark">
-        <img alt="Python, PyTorch, scikit-learn" src="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=light">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=pytorch,sklearn&theme=dark">
+        <img alt="PyTorch, scikit-learn" src="https://skillicons.dev/icons?i=pytorch,sklearn&theme=light">
       </picture>
-      <br><sub>LLM applications, data pipelines and machine learning</sub>
+      <br><sub>AI engineering, data engineering and machine learning</sub>
     </td>
   </tr>
 </table>
@@ -120,8 +111,8 @@
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nnamanikester/nnamanikester/output/snake-dark.svg">
-  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/nnamanikester/nnamanikester/output/snake-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/snake-dark.svg">
+  <img alt="A snake writing KESCRIPT across a contribution grid" src="./assets/snake-light.svg" width="100%">
 </picture>
 
 <br><br>
@@ -129,7 +120,7 @@
 <h3 align="center">Let's build something together</h3>
 
 <p align="center">
-  Want to talk about mobile, web, AI or data work?<br>
+  Want to talk about software, AI or data?<br>
   The best way to reach me is <a href="https://linkedin.com/in/nnamanikester"><b>LinkedIn</b></a>.
 </p>
 
